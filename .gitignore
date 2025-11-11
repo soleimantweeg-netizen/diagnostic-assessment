@@ -1,0 +1,24 @@
+# Diagnostic Assessment - .gitignore
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Test results
+test-results/
+results/
+
+# Personal data
+personal-data/
+school-data/
