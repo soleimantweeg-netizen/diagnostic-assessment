@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الاختبار التشخيصي للمدارس الحكومية وفقاً لمعايير هيئة تقويم التعليم والتدريب">
+    <meta name="keywords" content="اختبار تشخيصي, مدارس, تقويم, تعليم, جدة">
+    <meta name="author" content="د. سليمان تويج">
+    <title>الاختبار التشخيصي للمدارس الحكومية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logos">
+                <img src="شعاروزارةالتعليم.png" alt="شعار وزارة التعليم" class="logo">
+                <img src="شعارالواحة.png" alt="شعار مدارس واحة جدة" class="logo-large">
+            </div>
+            <h1 class="title">الاختبار التشخيصي للمدارس الحكومية</h1>
+            <p class="subtitle">وفقاً لمعايير هيئة تقويم التعليم والتدريب</p>
+            <div class="copyright">
+                <p class="bold">© جميع الحقوق محفوظة - مدارس واحة جدة الأهلية</p>
+                <p>أُعد خصيصاً من أجل مبادرة ركائز التميز (بيت الخبرة) - تعليم جدة</p>
+                <p class="author">إعداد: د. سليمان تويج</p>
+                <p>العام: 2025</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Progress Card -->
+            <div class="card progress-card">
+                <div class="progress-info">
+                    <span class="progress-text">السؤال <span id="currentQuestion">1</span> من <span id="totalQuestions">40</span></span>
+                    <span class="progress-percent"><span id="progressPercent">3</span>%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 3%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="card question-card">
+                <div class="card-header">
+                    <h2 class="domain-title" id="domainTitle">المجال: الإدارة (القيادة) المدرسية</h2>
+                    <p class="domain-weight">الوزن النسبي: <span id="domainWeight">25%</span></p>
+                </div>
+                <div class="card-body">
+                    <div class="question-container">
+                        <div class="question-number" id="questionNumber">1</div>
+                        <p class="question-text" id="questionText">تضع المدرسة خطة تشغيلية مكتملة العناصر وفق أهداف تطويرية محددة، وتتابع تنفيذها بما يضمن تحقيق أهدافها.</p>
+                    </div>
+
+                    <div class="options" id="optionsContainer">
+                        <label class="option">
+                            <input type="radio" name="answer" value="4">
+                            <span class="option-label">(4) متحققة بدرجة كبيرة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="3">
+                            <span class="option-label">(3) متحققة بدرجة متوسطة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="2">
+                            <span class="option-label">(2) متحققة بدرجة قليلة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="1">
+                            <span class="option-label">(1) غير متحققة</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button class="btn btn-outline" id="prevBtn" disabled>
+                    <span>السابق</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="nav-actions">
+                    <button class="btn btn-outline" onclick="window.open('https://github.com/soleimantweeg-netizen/diagnostic-assessment/blob/main/الاختبار_التشخيصي.md', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.83331 8.33333L9.99998 12.5L14.1666 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 12.5V2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>تحميل PDF</span>
+                    </button>
+                    <button class="btn btn-outline" onclick="window.open('https://github.com/soleimantweeg-netizen/diagnostic-assessment/blob/main/دليل_التصحيح_والتقييم.md', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M11.6667 2.5H5C4.55797 2.5 4.13405 2.67559 3.82149 2.98816C3.50893 3.30072 3.33334 3.72464 3.33334 4.16667V15.8333C3.33334 16.2754 3.50893 16.6993 3.82149 17.0118C4.13405 17.3244 4.55797 17.5 5 17.5H15C15.442 17.5 15.866 17.3244 16.1785 17.0118C16.4911 16.6993 16.6667 16.2754 16.6667 15.8333V7.5L11.6667 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.6667 2.5V7.5H16.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>دليل التصحيح</span>
+                    </button>
+                </div>
+
+                <button class="btn btn-primary" id="nextBtn">
+                    <span>التالي</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Summary -->
+            <div class="card summary-card">
+                <h3 class="summary-title">ملخص المجالات الأربعة</h3>
+                <div class="domains-grid">
+                    <div class="domain-box">
+                        <h4>الإدارة (القيادة) المدرسية</h4>
+                        <p>عدد الأسئلة: 10</p>
+                        <p>الوزن النسبي: 25%</p>
+                        <p>الدرجة القصوى: 40</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>التعليم والتعلم</h4>
+                        <p>عدد الأسئلة: 12</p>
+                        <p>الوزن النسبي: 30%</p>
+                        <p>الدرجة القصوى: 48</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>نواتج التعلم</h4>
+                        <p>عدد الأسئلة: 12</p>
+                        <p>الوزن النسبي: 30%</p>
+                        <p>الدرجة القصوى: 48</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>البيئة المدرسية</h4>
+                        <p>عدد الأسئلة: 6</p>
+                        <p>الوزن النسبي: 15%</p>
+                        <p>الدرجة القصوى: 24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text bold">© 2025 مدارس واحة جدة الأهلية - جميع الحقوق محفوظة</p>
+            <p class="footer-text">إعداد: د. سليمان تويج</p>
+            <p class="footer-text">مبادرة ركائز التميز (بيت الخبرة) - تعليم جدة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
