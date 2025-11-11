@@ -1,0 +1,858 @@
+// بيانات الأسئلة
+const questions = [
+    // المجال الأول: الإدارة (القيادة) المدرسية (10 أسئلة)
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تضع المدرسة خطة تشغيلية مكتملة العناصر وفق أهداف تطويرية محددة، وتتابع تنفيذها بما يضمن تحقيق أهدافها."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تعزز المدرسة القيم الإسلامية والهوية الوطنية."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تلتزم المدرسة بقيم مهنة التعليم وأخلاقياتها."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "توفر المدرسة مناخاً آمناً للتعلم والنمو نفسياً واجتماعياً."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تنشر المدرسة قواعد السلوك والمواظبة، وتتابع تطبيقها."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "توفر المدرسة برامج وأنشطة تربوية داعمة للسلوك الإيجابي."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "توفر المدرسة برامج وأنشطة إثرائية غير صفية لتطوير مواهب المتعلمين، وتهيئتهم للمستقبل."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تعزز المدرسة بناء العلاقات الإيجابية والتعاون في المجتمع المدرسي، ومشاركة الأسرة في تعلم أبنائها، والشراكة المجتمعية."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تدعم المدرسة التطوير المهني لمنسوبيها وفقاً لنتائج تقويم الأداء الوظيفي واحتياجاتهم."
+    },
+    {
+        domain: "الإدارة (القيادة) المدرسية",
+        weight: "25%",
+        text: "تطبق المدرسة التقويم الذاتي المبني على المعايير المعتمدة من الهيئة، وتنفذ خطة للتحسين بناءً على نتائجه."
+    },
+    
+    // المجال الثاني: التعليم والتعلم (12 سؤالاً)
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "توفر المدرسة فرصاً متكافئة للتعلم تلبي احتياجات المتعلمين ومنهم ذوو الإعاقة والموهوبون."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تدعم المدرسة تنفيذ المناهج لتحقيق نواتج التعلم المستهدفة وفق الخطة الدراسية."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تنوع المدرسة في إستراتيجيات التدريس لتلبية احتياجات المتعلمين ودعم تعلمهم."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تفعل المدرسة التعلم الإلكتروني لتلبية احتياجات المتعلمين ودعم تعلمهم."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "توفر المدرسة أنشطة تعلم تطبيقية ترتبط بحياة المتعلمين."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تنمي المدرسة المهارات القرائية والعددية الأساسية لدى المتعلمين."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تنمي المدرسة مهارات التفكير العليا لدى المتعلمين."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تنمي المدرسة المهارات العاطفية والاجتماعية لدى المتعلمين."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تنمي المدرسة المهارات الرقمية لدى المتعلمين."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تعزز المدرسة دافعية المتعلمين للتعلم والاستمتاع به."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تقوم المدرسة أداء المتعلمين باستخدام أساليب وأدوات تقويم متنوعة وفاعلة."
+    },
+    {
+        domain: "التعليم والتعلم",
+        weight: "30%",
+        text: "تحلل المدرسة نتائج التقويم وتوظفها في تحسين نواتج التعلم بانتظام، وتقدم التغذية الراجعة للمتعلمين."
+    },
+    
+    // المجال الثالث: نواتج التعلم (12 سؤالاً)
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يحقق المتعلمون نتائج متقدمة في مجالات القراءة والرياضيات والعلوم وفقاً للاختبارات الوطنية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يحقق المتعلمون تقدماً في مجال القراءة قياساً على مستوى أداء المدرسة السابق في الاختبارات الوطنية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يحقق المتعلمون تقدماً في مجال الرياضيات قياساً على مستوى أداء المدرسة السابق في الاختبارات الوطنية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يحقق المتعلمون تقدماً في مجال العلوم قياساً على مستوى أداء المدرسة السابق في الاختبارات الوطنية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يظهر المتعلمون الاعتزاز بالقيم والهوية الوطنية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يظهر المتعلمون اتجاهات إيجابية نحو ذواتهم."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يظهر المتعلمون التزاماً بالممارسات الصحية السليمة."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يشارك المتعلمون في الأنشطة المجتمعية والأعمال التطوعية."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يلتزم المتعلمون بقواعد السلوك والانضباط المدرسي."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يظهر المتعلمون القدرة على البحث والتعلم الذاتي."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يظهر المتعلمون اعتزازاً بثقافتهم واحتراماً للتنوع الثقافي في المجتمع."
+    },
+    {
+        domain: "نواتج التعلم",
+        weight: "30%",
+        text: "يحقق المتعلمون نتائج متقدمة في جميع المواد الدراسية."
+    },
+    
+    // المجال الرابع: البيئة المدرسية (6 أسئلة)
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تنظيم مبنى المدرسة ملائم لعدد المتعلمين والمرحلة العمرية."
+    },
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تتوافر فصول ومعامل ملائمة للعملية التعليمية تلبي احتياجات المتعلمين ومنهم ذوو الإعاقة."
+    },
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تلبي المرافق والخدمات المساندة احتياجات المتعلمين ومنهم ذوو الإعاقة."
+    },
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تتوافر في فصول المدرسة ومعاملها وجميع مرافقها متطلبات الأمن والسلامة."
+    },
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تعمل المدرسة على صيانة جميع مرافق المبنى وتجهيزاته بانتظام."
+    },
+    {
+        domain: "البيئة المدرسية",
+        weight: "15%",
+        text: "تعمل المدرسة على نظافة المبنى المدرسي وجميع مرافقه بانتظام."
+    }
+];
+
+// المتغيرات العامة
+let currentQuestionIndex = 0;
+const answers = new Array(questions.length).fill(null);
+
+// العناصر
+const domainTitle = document.getElementById('domainTitle');
+const domainWeight = document.getElementById('domainWeight');
+const questionNumber = document.getElementById('questionNumber');
+const questionText = document.getElementById('questionText');
+const currentQuestion = document.getElementById('currentQuestion');
+const totalQuestions = document.getElementById('totalQuestions');
+const progressPercent = document.getElementById('progressPercent');
+const progressFill = document.getElementById('progressFill');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+// تحديث العرض
+function updateDisplay() {
+    const question = questions[currentQuestionIndex];
+    
+    // تحديث معلومات السؤال
+    domainTitle.textContent = `المجال: ${question.domain}`;
+    domainWeight.textContent = `الوزن النسبي: ${question.weight}`;
+    questionNumber.textContent = currentQuestionIndex + 1;
+    questionText.textContent = question.text;
+    
+    // تحديث التقدم
+    currentQuestion.textContent = currentQuestionIndex + 1;
+    totalQuestions.textContent = questions.length;
+    const percent = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+    progressPercent.textContent = percent;
+    progressFill.style.width = `${percent}%`;
+    
+    // تحديث الإجابة المحفوظة
+    const savedAnswer = answers[currentQuestionIndex];
+    const radios = document.querySelectorAll('input[name="answer"]');
+    radios.forEach(radio => {
+        radio.checked = radio.value === savedAnswer;
+    });
+    
+    // تحديث الأزرار
+    prevBtn.disabled = currentQuestionIndex === 0;
+    nextBtn.disabled = false;
+    
+    // التمرير للأعلى
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// حفظ الإجابة
+function saveAnswer() {
+    const selectedRadio = document.querySelector('input[name="answer"]:checked');
+    if (selectedRadio) {
+        answers[currentQuestionIndex] = selectedRadio.value;
+    }
+}
+
+// السؤال السابق
+prevBtn.addEventListener('click', () => {
+    if (currentQuestionIndex > 0) {
+        saveAnswer();
+        currentQuestionIndex--;
+        updateDisplay();
+    }
+});
+
+// السؤال التالي
+nextBtn.addEventListener('click', () => {
+    saveAnswer();
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        updateDisplay();
+    } else {
+        // انتهى الاختبار
+        showResults();
+    }
+});
+
+// عرض النتائج
+function showResults() {
+    const answeredCount = answers.filter(a => a !== null).length;
+    const unansweredCount = questions.length - answeredCount;
+    
+    let message = `تم الإجابة على ${answeredCount} من ${questions.length} سؤالاً.\n\n`;
+    
+    if (unansweredCount > 0) {
+        message += `لم يتم الإجابة على ${unansweredCount} سؤالاً.\n\n`;
+        message += `هل تريد المتابعة؟`;
+        
+        if (confirm(message)) {
+            // البحث عن أول سؤال غير مجاب عليه
+            const firstUnanswered = answers.findIndex(a => a === null);
+            if (firstUnanswered !== -1) {
+                currentQuestionIndex = firstUnanswered;
+                updateDisplay();
+            }
+        }
+    } else {
+        message += `شكراً لإكمال الاختبار!\n\n`;
+        message += `يمكنك الآن تحميل دليل التصحيح والتقييم لحساب النتائج.`;
+        alert(message);
+    }
+}
+
+// حفظ الإجابة عند تغيير الاختيار
+document.querySelectorAll('input[name="answer"]').forEach(radio => {
+    radio.addEventListener('change', saveAnswer);
+});
+
+// التهيئة الأولية
+updateDisplay();
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #ecfeff 100%);
+    min-height: 100vh;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 0;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    height: 4rem;
+    object-fit: contain;
+}
+
+.logo-large {
+    height: 5rem;
+    object-fit: contain;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 0.75rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.copyright p {
+    margin: 0.25rem 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.author {
+    font-weight: 500;
+}
+
+/* Main */
+.main {
+    padding: 2rem 0;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* Progress Card */
+.progress-card {
+    padding: 1.5rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.progress-percent {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #059669;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+    transition: width 0.3s ease;
+}
+
+/* Question Card */
+.question-card {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #059669 0%, #0891b2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.domain-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.domain-weight {
+    color: #d1fae5;
+    font-size: 0.875rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.question-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.question-number {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #d1fae5;
+    color: #047857;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.question-text {
+    flex: 1;
+    font-size: 1.125rem;
+    color: #1f2937;
+    line-height: 1.75;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    background: #f0fdf4;
+    border-color: #059669;
+}
+
+.option input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.75rem;
+    cursor: pointer;
+    accent-color: #059669;
+}
+
+.option input[type="radio"]:checked ~ .option-label {
+    font-weight: 600;
+    color: #047857;
+}
+
+.option-label {
+    flex: 1;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.option:has(input:checked) {
+    background: #f0fdf4;
+    border-color: #059669;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #059669;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #047857;
+}
+
+.btn-outline {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Summary Card */
+.summary-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
+    padding: 2rem;
+}
+
+.summary-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 1.5rem;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.domain-box {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-right: 4px solid #059669;
+}
+
+.domain-box h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.domain-box p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0.25rem 0;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.footer-text:first-child {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-text:not(:first-child) {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .logos {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+    
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn {
+        flex: 1;
+    }
+    
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الاختبار التشخيصي للمدارس الحكومية وفقاً لمعايير هيئة تقويم التعليم والتدريب">
+    <meta name="keywords" content="اختبار تشخيصي, مدارس, تقويم, تعليم, جدة">
+    <meta name="author" content="د. سليمان تويج">
+    <title>الاختبار التشخيصي للمدارس الحكومية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logos">
+                <img src="شعاروزارةالتعليم.png" alt="شعار وزارة التعليم" class="logo">
+                <img src="شعارالواحة.png" alt="شعار مدارس واحة جدة" class="logo-large">
+            </div>
+            <h1 class="title">الاختبار التشخيصي للمدارس الحكومية</h1>
+            <p class="subtitle">وفقاً لمعايير هيئة تقويم التعليم والتدريب</p>
+            <div class="copyright">
+                <p class="bold">© جميع الحقوق محفوظة - مدارس واحة جدة الأهلية</p>
+                <p>أُعد خصيصاً من أجل مبادرة ركائز التميز (بيت الخبرة) - تعليم جدة</p>
+                <p class="author">إعداد: د. سليمان تويج</p>
+                <p>العام: 2025</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Progress Card -->
+            <div class="card progress-card">
+                <div class="progress-info">
+                    <span class="progress-text">السؤال <span id="currentQuestion">1</span> من <span id="totalQuestions">40</span></span>
+                    <span class="progress-percent"><span id="progressPercent">3</span>%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 3%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="card question-card">
+                <div class="card-header">
+                    <h2 class="domain-title" id="domainTitle">المجال: الإدارة (القيادة) المدرسية</h2>
+                    <p class="domain-weight">الوزن النسبي: <span id="domainWeight">25%</span></p>
+                </div>
+                <div class="card-body">
+                    <div class="question-container">
+                        <div class="question-number" id="questionNumber">1</div>
+                        <p class="question-text" id="questionText">تضع المدرسة خطة تشغيلية مكتملة العناصر وفق أهداف تطويرية محددة، وتتابع تنفيذها بما يضمن تحقيق أهدافها.</p>
+                    </div>
+
+                    <div class="options" id="optionsContainer">
+                        <label class="option">
+                            <input type="radio" name="answer" value="4">
+                            <span class="option-label">(4) متحققة بدرجة كبيرة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="3">
+                            <span class="option-label">(3) متحققة بدرجة متوسطة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="2">
+                            <span class="option-label">(2) متحققة بدرجة قليلة</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="1">
+                            <span class="option-label">(1) غير متحققة</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button class="btn btn-outline" id="prevBtn" disabled>
+                    <span>السابق</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="nav-actions">
+                    <button class="btn btn-outline" onclick="window.open('https://github.com/soleimantweeg-netizen/diagnostic-assessment/blob/main/الاختبار_التشخيصي.md', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.83331 8.33333L9.99998 12.5L14.1666 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 12.5V2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>تحميل PDF</span>
+                    </button>
+                    <button class="btn btn-outline" onclick="window.open('https://github.com/soleimantweeg-netizen/diagnostic-assessment/blob/main/دليل_التصحيح_والتقييم.md', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M11.6667 2.5H5C4.55797 2.5 4.13405 2.67559 3.82149 2.98816C3.50893 3.30072 3.33334 3.72464 3.33334 4.16667V15.8333C3.33334 16.2754 3.50893 16.6993 3.82149 17.0118C4.13405 17.3244 4.55797 17.5 5 17.5H15C15.442 17.5 15.866 17.3244 16.1785 17.0118C16.4911 16.6993 16.6667 16.2754 16.6667 15.8333V7.5L11.6667 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.6667 2.5V7.5H16.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>دليل التصحيح</span>
+                    </button>
+                </div>
+
+                <button class="btn btn-primary" id="nextBtn">
+                    <span>التالي</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Summary -->
+            <div class="card summary-card">
+                <h3 class="summary-title">ملخص المجالات الأربعة</h3>
+                <div class="domains-grid">
+                    <div class="domain-box">
+                        <h4>الإدارة (القيادة) المدرسية</h4>
+                        <p>عدد الأسئلة: 10</p>
+                        <p>الوزن النسبي: 25%</p>
+                        <p>الدرجة القصوى: 40</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>التعليم والتعلم</h4>
+                        <p>عدد الأسئلة: 12</p>
+                        <p>الوزن النسبي: 30%</p>
+                        <p>الدرجة القصوى: 48</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>نواتج التعلم</h4>
+                        <p>عدد الأسئلة: 12</p>
+                        <p>الوزن النسبي: 30%</p>
+                        <p>الدرجة القصوى: 48</p>
+                    </div>
+                    <div class="domain-box">
+                        <h4>البيئة المدرسية</h4>
+                        <p>عدد الأسئلة: 6</p>
+                        <p>الوزن النسبي: 15%</p>
+                        <p>الدرجة القصوى: 24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text bold">© 2025 مدارس واحة جدة الأهلية - جميع الحقوق محفوظة</p>
+            <p class="footer-text">إعداد: د. سليمان تويج</p>
+            <p class="footer-text">مبادرة ركائز التميز (بيت الخبرة) - تعليم جدة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
